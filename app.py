@@ -5,5 +5,9 @@ app = Flask(__name__)
 def index():
     return jsonify({'test':'route'})
 
+@app.route('/no')
+def no():
+    return jsonify({'test':'route 2'})
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5500, host='0.0.0.0')
